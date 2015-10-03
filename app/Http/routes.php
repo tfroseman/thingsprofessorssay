@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('post', function () {
     return view('post');
 });
+
+
+Route::get('about', 'StaticPageController@about');
+Route::get('about', 'StaticPageController@contact');
