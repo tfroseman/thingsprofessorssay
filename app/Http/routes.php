@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('post', function () {
-    return view('post');
-});
+Route::get('/', 'PostController@index');
+Route::post('post', 'PostController@store');
+Route::get('post/new', 'PostController@new_post');
+Route::get('post/{id}', 'PostController@show');
 
 
 Route::get('about', 'StaticPageController@about');
